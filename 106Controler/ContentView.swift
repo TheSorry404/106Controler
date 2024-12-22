@@ -74,7 +74,7 @@ struct ContentView: View {
         GeometryReader { geometry in
             VStack {
 
-                @State private var lastOperation = "无"
+                var lastOperation = "无"
 
                 Spacer()
 
@@ -96,6 +96,7 @@ struct ContentView: View {
                         }
                     }
                     lastOperation = "机柜开"
+                    refresher += 1
                     showBaseOpAlert = true
                     }) {
                     Text("机柜开")
@@ -128,6 +129,7 @@ struct ContentView: View {
                         }
                     }
                     lastOperation = "机柜关"
+                    refresher += 1
                     showBaseClAlert = true
                     }) {
                     Text("机柜关")
@@ -160,6 +162,7 @@ struct ContentView: View {
                         }
                     }
                     lastOperation = "大屏开"
+                    refresher += 1
                     showScrnOpAlert = true
                     }) {
                     Text("外接屏开")
@@ -192,6 +195,7 @@ struct ContentView: View {
                         }
                     }
                     lastOperation = "大屏关"
+                    refresher += 1
                     showScrnClAlert = true
                     }) {
                     Text("外接屏关")
@@ -224,6 +228,7 @@ struct ContentView: View {
                         }
                     }
                     lastOperation = "面光灯开"
+                    refresher += 1
                     showLghtOpAlert = true
                     }) {
                     Text("面光灯开")
@@ -256,6 +261,7 @@ struct ContentView: View {
                         }
                     }
                     lastOperation = "面光灯关"
+                    refresher += 1
                     showLghtClAlert = true
                     }) {
                     Text("面光灯关")
@@ -291,6 +297,9 @@ struct ContentView: View {
                     .font(.footnote)
                     .padding()
                     .frame(maxWidth: .infinity, alignment: .center)
+                    .onChange(of: refresher) { _ in
+                        refreshTrigger.updateView()
+                    }
                 }
             }
     }
