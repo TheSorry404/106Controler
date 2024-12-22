@@ -295,15 +295,16 @@ struct ContentView: View {
                 }
                 Spacer()
                 Text(opTip)
-                .font(.footnote)
-                .padding()
-                .frame(maxWidth: .infinity, alignment: .center)
-                .onChange(of: opTip) { lastOperation in
-                    print("上一次操作：\(lastOperation)")
-                }
+                    .font(.footnote)
+                    .padding()
+                    .frame(maxWidth: .infinity, alignment: .center)
+                    .onChange(of: opTip) { lastOperation in
+                        print("上一次操作：\(lastOperation)")
+                        opTip = "上一次操作：\(lastOperation)"
+                    }
             }
     }
-}
+}}
 
 struct SocketUtil {
     static let HOST = "10.10.100.254"
