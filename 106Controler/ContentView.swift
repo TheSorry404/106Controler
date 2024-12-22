@@ -17,7 +17,8 @@ import UIKit
 
 struct ContentView: View {
     
-    @State private var refresher = 0
+    @State var refresher = 0
+    @State var opTip = "上一次操作：无"
     
     class ViewController: UIViewController {
         
@@ -74,7 +75,7 @@ struct ContentView: View {
         GeometryReader { geometry in
             VStack {
 
-                var lastOperation = "无"
+                @State var lastOperation = "无"
 
                 Spacer()
 
@@ -293,13 +294,12 @@ struct ContentView: View {
                     }
                 }
                 Spacer()
-                Text("上一次操作：\(lastOperation)")
-                    .font(.footnote)
-                    .padding()
-                    .frame(maxWidth: .infinity, alignment: .center)
-                    .onChange(of: refresher) { _ in
-                        refreshTrigger.updateView()
-                    }
+                Text(opTip)
+                .font(.footnote)
+                .padding()
+                .frame(maxWidth: .infinity, alignment: .center)
+                .onChange(of: opTip) { lastOperation in
+                    print("上一次操作：\(lastOperation)")
                 }
             }
     }
