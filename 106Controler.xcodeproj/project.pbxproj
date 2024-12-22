@@ -11,43 +11,16 @@
 		044716BE2CBA5B6B009658D7 /* Socket in Frameworks */ = {isa = PBXBuildFile; productRef = 044716BD2CBA5B6B009658D7 /* Socket */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		044716962CBA48F1009658D7 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0447167D2CBA48ED009658D7 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 044716842CBA48ED009658D7;
-			remoteInfo = "南区活动中心会议室控制台";
-		};
-		044716A02CBA48F1009658D7 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0447167D2CBA48ED009658D7 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 044716842CBA48ED009658D7;
-			remoteInfo = "南区活动中心会议室控制台";
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
-		044716852CBA48ED009658D7 /* 南区活动中心会议室控制台.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "南区活动中心会议室控制台.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		044716952CBA48F1009658D7 /* 南区活动中心会议室控制台Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "南区活动中心会议室控制台Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		0447169F2CBA48F1009658D7 /* 南区活动中心会议室控制台UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "南区活动中心会议室控制台UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		044716852CBA48ED009658D7 /* 106Controler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 106Controler.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0457CA2D2D17F95D0093E0A3 /* 106Controler.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = 106Controler.xcodeproj; sourceTree = "<group>"; };
+		04A9048F2D17FCF000878793 /* 106Controler.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = 106Controler.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		044716872CBA48ED009658D7 /* 南区活动中心会议室控制台 */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = "南区活动中心会议室控制台";
-			sourceTree = "<group>";
-		};
-		044716982CBA48F1009658D7 /* 南区活动中心会议室控制台Tests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = "南区活动中心会议室控制台Tests";
-			sourceTree = "<group>";
-		};
-		044716A22CBA48F1009658D7 /* 南区活动中心会议室控制台UITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = "南区活动中心会议室控制台UITests";
+			name = "南区活动中心会议室控制台";
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -62,20 +35,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		044716922CBA48F1009658D7 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		0447169C2CBA48F1009658D7 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -83,8 +42,6 @@
 			isa = PBXGroup;
 			children = (
 				044716872CBA48ED009658D7 /* 南区活动中心会议室控制台 */,
-				044716982CBA48F1009658D7 /* 南区活动中心会议室控制台Tests */,
-				044716A22CBA48F1009658D7 /* 南区活动中心会议室控制台UITests */,
 				044716862CBA48ED009658D7 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -92,19 +49,27 @@
 		044716862CBA48ED009658D7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				044716852CBA48ED009658D7 /* 南区活动中心会议室控制台.app */,
-				044716952CBA48F1009658D7 /* 南区活动中心会议室控制台Tests.xctest */,
-				0447169F2CBA48F1009658D7 /* 南区活动中心会议室控制台UITests.xctest */,
+				044716852CBA48ED009658D7 /* 106Controler.app */,
 			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0457CA302D17F95D0093E0A3 /* Products */ = {
+			isa = PBXGroup;
+			name = Products;
+			sourceTree = "<group>";
+		};
+		04A904922D17FCF000878793 /* Products */ = {
+			isa = PBXGroup;
 			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		044716842CBA48ED009658D7 /* 南区活动中心会议室控制台 */ = {
+		044716842CBA48ED009658D7 /* 106Controler */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 044716A92CBA48F1009658D7 /* Build configuration list for PBXNativeTarget "南区活动中心会议室控制台" */;
+			buildConfigurationList = 044716A92CBA48F1009658D7 /* Build configuration list for PBXNativeTarget "106Controler" */;
 			buildPhases = (
 				044716812CBA48ED009658D7 /* Sources */,
 				044716822CBA48ED009658D7 /* Frameworks */,
@@ -117,60 +82,14 @@
 			fileSystemSynchronizedGroups = (
 				044716872CBA48ED009658D7 /* 南区活动中心会议室控制台 */,
 			);
-			name = "南区活动中心会议室控制台";
+			name = 106Controler;
 			packageProductDependencies = (
 				044716BB2CBA5B6B009658D7 /* BlueSocketTestCommonLibrary */,
 				044716BD2CBA5B6B009658D7 /* Socket */,
 			);
 			productName = "南区活动中心会议室控制台";
-			productReference = 044716852CBA48ED009658D7 /* 南区活动中心会议室控制台.app */;
+			productReference = 044716852CBA48ED009658D7 /* 106Controler.app */;
 			productType = "com.apple.product-type.application";
-		};
-		044716942CBA48F1009658D7 /* 南区活动中心会议室控制台Tests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 044716AC2CBA48F1009658D7 /* Build configuration list for PBXNativeTarget "南区活动中心会议室控制台Tests" */;
-			buildPhases = (
-				044716912CBA48F1009658D7 /* Sources */,
-				044716922CBA48F1009658D7 /* Frameworks */,
-				044716932CBA48F1009658D7 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				044716972CBA48F1009658D7 /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				044716982CBA48F1009658D7 /* 南区活动中心会议室控制台Tests */,
-			);
-			name = "南区活动中心会议室控制台Tests";
-			packageProductDependencies = (
-			);
-			productName = "南区活动中心会议室控制台Tests";
-			productReference = 044716952CBA48F1009658D7 /* 南区活动中心会议室控制台Tests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		0447169E2CBA48F1009658D7 /* 南区活动中心会议室控制台UITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 044716AF2CBA48F1009658D7 /* Build configuration list for PBXNativeTarget "南区活动中心会议室控制台UITests" */;
-			buildPhases = (
-				0447169B2CBA48F1009658D7 /* Sources */,
-				0447169C2CBA48F1009658D7 /* Frameworks */,
-				0447169D2CBA48F1009658D7 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				044716A12CBA48F1009658D7 /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				044716A22CBA48F1009658D7 /* 南区活动中心会议室控制台UITests */,
-			);
-			name = "南区活动中心会议室控制台UITests";
-			packageProductDependencies = (
-			);
-			productName = "南区活动中心会议室控制台UITests";
-			productReference = 0447169F2CBA48F1009658D7 /* 南区活动中心会议室控制台UITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
@@ -185,17 +104,9 @@
 					044716842CBA48ED009658D7 = {
 						CreatedOnToolsVersion = 16.0;
 					};
-					044716942CBA48F1009658D7 = {
-						CreatedOnToolsVersion = 16.0;
-						TestTargetID = 044716842CBA48ED009658D7;
-					};
-					0447169E2CBA48F1009658D7 = {
-						CreatedOnToolsVersion = 16.0;
-						TestTargetID = 044716842CBA48ED009658D7;
-					};
 				};
 			};
-			buildConfigurationList = 044716802CBA48ED009658D7 /* Build configuration list for PBXProject "南区活动中心会议室控制台" */;
+			buildConfigurationList = 044716802CBA48ED009658D7 /* Build configuration list for PBXProject "106Controler" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -210,31 +121,25 @@
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 044716862CBA48ED009658D7 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 0457CA302D17F95D0093E0A3 /* Products */;
+					ProjectRef = 0457CA2D2D17F95D0093E0A3 /* 106Controler.xcodeproj */;
+				},
+				{
+					ProductGroup = 04A904922D17FCF000878793 /* Products */;
+					ProjectRef = 04A9048F2D17FCF000878793 /* 106Controler.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
-				044716842CBA48ED009658D7 /* 南区活动中心会议室控制台 */,
-				044716942CBA48F1009658D7 /* 南区活动中心会议室控制台Tests */,
-				0447169E2CBA48F1009658D7 /* 南区活动中心会议室控制台UITests */,
+				044716842CBA48ED009658D7 /* 106Controler */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		044716832CBA48ED009658D7 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		044716932CBA48F1009658D7 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		0447169D2CBA48F1009658D7 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -251,34 +156,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		044716912CBA48F1009658D7 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		0447169B2CBA48F1009658D7 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		044716972CBA48F1009658D7 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 044716842CBA48ED009658D7 /* 南区活动中心会议室控制台 */;
-			targetProxy = 044716962CBA48F1009658D7 /* PBXContainerItemProxy */;
-		};
-		044716A12CBA48F1009658D7 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 044716842CBA48ED009658D7 /* 南区活动中心会议室控制台 */;
-			targetProxy = 044716A02CBA48F1009658D7 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		044716A72CBA48F1009658D7 /* Debug */ = {
@@ -337,7 +215,7 @@
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
-				ONLY_ACTIVE_ARCH = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -394,6 +272,7 @@
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				VALIDATE_PRODUCT = YES;
@@ -409,7 +288,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"南区活动中心会议室控制台/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"106Controler/Preview Content\"";
 				DEVELOPMENT_TEAM = G2NPBSDZ8N;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -442,7 +321,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"南区活动中心会议室控制台/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"106Controler/Preview Content\"";
 				DEVELOPMENT_TEAM = G2NPBSDZ8N;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -465,78 +344,10 @@
 			};
 			name = Release;
 		};
-		044716AD2CBA48F1009658D7 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.syan.------------Tests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/南区活动中心会议室控制台.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/南区活动中心会议室控制台";
-			};
-			name = Debug;
-		};
-		044716AE2CBA48F1009658D7 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.syan.------------Tests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/南区活动中心会议室控制台.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/南区活动中心会议室控制台";
-			};
-			name = Release;
-		};
-		044716B02CBA48F1009658D7 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.syan.------------UITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "南区活动中心会议室控制台";
-			};
-			name = Debug;
-		};
-		044716B12CBA48F1009658D7 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.syan.------------UITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "南区活动中心会议室控制台";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		044716802CBA48ED009658D7 /* Build configuration list for PBXProject "南区活动中心会议室控制台" */ = {
+		044716802CBA48ED009658D7 /* Build configuration list for PBXProject "106Controler" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				044716A72CBA48F1009658D7 /* Debug */,
@@ -545,29 +356,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		044716A92CBA48F1009658D7 /* Build configuration list for PBXNativeTarget "南区活动中心会议室控制台" */ = {
+		044716A92CBA48F1009658D7 /* Build configuration list for PBXNativeTarget "106Controler" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				044716AA2CBA48F1009658D7 /* Debug */,
 				044716AB2CBA48F1009658D7 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		044716AC2CBA48F1009658D7 /* Build configuration list for PBXNativeTarget "南区活动中心会议室控制台Tests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				044716AD2CBA48F1009658D7 /* Debug */,
-				044716AE2CBA48F1009658D7 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		044716AF2CBA48F1009658D7 /* Build configuration list for PBXNativeTarget "南区活动中心会议室控制台UITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				044716B02CBA48F1009658D7 /* Debug */,
-				044716B12CBA48F1009658D7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

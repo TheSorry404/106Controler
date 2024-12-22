@@ -11,8 +11,50 @@
 
 import SwiftUI
 import Socket
+import UIKit
+
+
 
 struct ContentView: View {
+    
+    @State private var refresher = 0
+    
+    class ViewController: UIViewController {
+        
+        class TriggerViewModel: ObservableObject {
+            func updateView(){
+                self.objectWillChange.send()
+            }
+            @Published var refreshing = 0
+        }
+        
+        @ObservedObject var refreshTrigger = TriggerViewModel()
+        
+        override func viewDidLoad(){
+            super.viewDidLoad()
+            updateViewForOrientation(UIDevice.current.orientation)
+            NotificationCenter.default.addObserver(self, selector: #selector(orientationDidChange), name: UIDevice.orientationDidChangeNotification, object: nil)
+        }
+        
+        @objc func orientationDidChange(){
+            updateViewForOrientation(UIDevice.current.orientation)
+        }
+        
+        func updateViewForOrientation(_ orientation: UIDeviceOrientation){
+            if orientation.isPortrait{
+                refreshTrigger.updateView()
+                refreshTrigger.refreshing += 1
+//                refresher += 1
+            } else if orientation.isLandscape {
+                refreshTrigger.updateView()
+                refreshTrigger.refreshing += 1
+            }
+        }
+        
+        deinit{
+            NotificationCenter.default.removeObserver(self)
+        }
+    }
 
     let columns = [
         GridItem(.flexible()),
@@ -51,8 +93,12 @@ struct ContentView: View {
                     .font(.headline)
                     .foregroundColor(.white)
                     .padding()
-                    .frame(maxWidth: .infinity, maxHeight: .infinity)
-                    .aspectRatio(1.5, contentMode: .fit)
+.frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .aspectRatio(contentMode: .fit)
+                    .frame(
+                        width: UIScreen.main.bounds.width * 0.3,
+                        height: UIScreen.main.bounds.height * 0.15
+                    )
                     .background(Color.blue)
                     .cornerRadius(15)
                     .shadow(radius: 5)
@@ -78,8 +124,12 @@ struct ContentView: View {
                     .font(.headline)
                     .foregroundColor(.white)
                     .padding()
-                    .frame(maxWidth: .infinity, maxHeight: .infinity)
-                    .aspectRatio(1.5, contentMode: .fit)
+.frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .aspectRatio(contentMode: .fit)
+                    .frame(
+                        width: UIScreen.main.bounds.width * 0.3,
+                        height: UIScreen.main.bounds.height * 0.15
+                    )
                     .background(Color.red)
                     .cornerRadius(15)
                     .shadow(radius: 5)
@@ -105,8 +155,12 @@ struct ContentView: View {
                     .font(.headline)
                     .foregroundColor(.white)
                     .padding()
-                    .frame(maxWidth: .infinity, maxHeight: .infinity)
-                    .aspectRatio(1.5, contentMode: .fit)
+.frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .aspectRatio(contentMode: .fit)
+                    .frame(
+                        width: UIScreen.main.bounds.width * 0.3,
+                        height: UIScreen.main.bounds.height * 0.15
+                    )
                     .background(Color.blue)
                     .cornerRadius(15)
                     .shadow(radius: 5)
@@ -132,8 +186,12 @@ struct ContentView: View {
                     .font(.headline)
                     .foregroundColor(.white)
                     .padding()
-                    .frame(maxWidth: .infinity, maxHeight: .infinity)
-                    .aspectRatio(1.5, contentMode: .fit)
+.frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .aspectRatio(contentMode: .fit)
+                    .frame(
+                        width: UIScreen.main.bounds.width * 0.3,
+                        height: UIScreen.main.bounds.height * 0.15
+                    )
                     .background(Color.red)
                     .cornerRadius(15)
                     .shadow(radius: 5)
@@ -159,8 +217,12 @@ struct ContentView: View {
                     .font(.headline)
                     .foregroundColor(.white)
                     .padding()
-                    .frame(maxWidth: .infinity, maxHeight: .infinity)
-                    .aspectRatio(1.5, contentMode: .fit)
+.frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .aspectRatio(contentMode: .fit)
+                    .frame(
+                        width: UIScreen.main.bounds.width * 0.3,
+                        height: UIScreen.main.bounds.height * 0.15
+                    )
                     .background(Color.blue)
                     .cornerRadius(15)
                     .shadow(radius: 5)
@@ -187,7 +249,11 @@ struct ContentView: View {
                     .foregroundColor(.white)
                     .padding()
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
-                    .aspectRatio(1.5, contentMode: .fit)
+                    .aspectRatio(contentMode: .fit)
+                    .frame(
+                        width: UIScreen.main.bounds.width * 0.3,
+                        height: UIScreen.main.bounds.height * 0.15
+                    )
                     .background(Color.red)
                     .cornerRadius(15)
                     .shadow(radius: 5)
@@ -207,6 +273,7 @@ struct ContentView: View {
             }
         }
         .padding()
+        
     }
 }
 
