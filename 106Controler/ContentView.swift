@@ -41,19 +41,25 @@ struct ContentView: View {
         }
         
         func updateViewForOrientation(_ orientation: UIDeviceOrientation){
-            if orientation.isPortrait{
+            if orientation.isPortrait || orientation.isLandscape {
                 refreshTrigger.updateView()
                 refreshTrigger.refreshing += 1
-//                refresher += 1
-            } else if orientation.isLandscape {
-                refreshTrigger.updateView()
-                refreshTrigger.refreshing += 1
+                DispatchQueue.main.async {
+                    self.view.setNeedsLayout()
+                    self.view.layoutIfNeeded()
+                }
             }
         }
         
         deinit{
             NotificationCenter.default.removeObserver(self)
         }
+    }
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to: size, with: coordinator)
+        coordinator.animate(alongsideTransition: { _ in
+            self.updateViewForOrientation(UIDevice.current.orientation)
+        })
     }
 
     let columns = [
