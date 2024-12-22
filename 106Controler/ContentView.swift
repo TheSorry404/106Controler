@@ -55,12 +55,6 @@ struct ContentView: View {
             NotificationCenter.default.removeObserver(self)
         }
     }
-    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
-        super.viewWillTransition(to: size, with: coordinator)
-        coordinator.animate(alongsideTransition: { _ in
-            self.updateViewForOrientation(UIDevice.current.orientation)
-        })
-    }
 
     let columns = [
         GridItem(.flexible()),
@@ -79,7 +73,7 @@ struct ContentView: View {
     var body: some View {        
         GeometryReader { geometry in
             VStack {
-            Spacer()
+            Spacer()Spacer()Spacer()Spacer()
             Text("106控制")
                 .font(.largeTitle)
                 .fontWeight(.bold)
@@ -280,7 +274,6 @@ struct ContentView: View {
                 }
                 }
             }
-            .padding()
             Spacer()
             }
         }
