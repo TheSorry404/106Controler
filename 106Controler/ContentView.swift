@@ -5,6 +5,10 @@
 //  Created by Syan && OpenAI on 2024/10/12.
 //
 
+// TODO
+// - 按键适配百分比，因为发现了居然没关横屏，为了让横屏和iPad也能用决定改一下。
+// - 在上面下面可以写几行字。
+
 import SwiftUI
 import Socket
 
@@ -25,6 +29,11 @@ struct ContentView: View {
     
     
     var body: some View {        
+        Text("106控制")
+            .font(.largeTitle)
+            .fontWeight(.bold)
+            .padding()
+            .frame(maxWidth: .infinity, alignment: .center)
         LazyVGrid(columns: columns, spacing: 15) {
             
             Button(action: {
@@ -42,21 +51,17 @@ struct ContentView: View {
                     .font(.headline)
                     .foregroundColor(.white)
                     .padding()
-                    .frame(height: 70)
-                    .frame(width: 130)
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .aspectRatio(1.5, contentMode: .fit)
                     .background(Color.blue)
                     .cornerRadius(15)
                     .shadow(radius: 5)
             }
-            // .alert(isPresented: $showBaseOpAlert){
-            //     Alert(title: Text("完成"), message: Text("已发送开机柜指令"))
-            // }
             .alert("完成", isPresented: $showBaseOpAlert) {
                 Button("OK", role: .cancel) { }
             } message: {
                 Text("已发送开机柜指令")
             }
-            
             
             Button(action: {
                 SocketUtil.send("3A 00 00 03 00 03 05 0D 23 00 4D 80 80"){  error in
@@ -73,15 +78,12 @@ struct ContentView: View {
                     .font(.headline)
                     .foregroundColor(.white)
                     .padding()
-                    .frame(height: 70)
-                    .frame(width: 130)
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .aspectRatio(1.5, contentMode: .fit)
                     .background(Color.red)
                     .cornerRadius(15)
                     .shadow(radius: 5)
             }
-            // .alert(isPresented: $showBaseClAlert){
-            //     Alert(title: Text("完成"), message: Text("已发送关机柜指令"))
-            // }
             .alert("完成", isPresented: $showBaseClAlert) {
                 Button("OK", role: .cancel) { }
             } message: {
@@ -103,15 +105,12 @@ struct ContentView: View {
                     .font(.headline)
                     .foregroundColor(.white)
                     .padding()
-                    .frame(height: 70)
-                    .frame(width: 130)
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .aspectRatio(1.5, contentMode: .fit)
                     .background(Color.blue)
                     .cornerRadius(15)
                     .shadow(radius: 5)
             }
-            // .alert(isPresented: $showScrnOpAlert){
-            //     Alert(title: Text("完成"), message: Text("已发送开大屏指令"))
-            // }
             .alert("完成", isPresented: $showScrnOpAlert) {
                 Button("OK", role: .cancel) { }
             } message: {
@@ -133,15 +132,12 @@ struct ContentView: View {
                     .font(.headline)
                     .foregroundColor(.white)
                     .padding()
-                    .frame(height: 70)
-                    .frame(width: 130)
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .aspectRatio(1.5, contentMode: .fit)
                     .background(Color.red)
                     .cornerRadius(15)
                     .shadow(radius: 5)
             }
-            // .alert(isPresented: $showScrnClAlert){
-            //     Alert(title: Text("完成"), message: Text("已发送关大屏指令"))
-            // }
             .alert("完成", isPresented: $showScrnClAlert) {
                 Button("OK", role: .cancel) { }
             } message: {
@@ -163,15 +159,12 @@ struct ContentView: View {
                     .font(.headline)
                     .foregroundColor(.white)
                     .padding()
-                    .frame(height: 70)
-                    .frame(width: 130)
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .aspectRatio(1.5, contentMode: .fit)
                     .background(Color.blue)
                     .cornerRadius(15)
                     .shadow(radius: 5)
             }
-            // .alert(isPresented: $showLghtOpAlert){
-            //     Alert(title: Text("完成"), message: Text("已发送开面灯指令"))
-            // }
             .alert("完成", isPresented: $showLghtOpAlert) {
                 Button("OK", role: .cancel) { }
             } message: {
@@ -193,15 +186,12 @@ struct ContentView: View {
                     .font(.headline)
                     .foregroundColor(.white)
                     .padding()
-                    .frame(height: 70)
-                    .frame(width: 130)
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .aspectRatio(1.5, contentMode: .fit)
                     .background(Color.red)
                     .cornerRadius(15)
                     .shadow(radius: 5)
             }
-            // .alert(isPresented: $showLghtClAlert){
-            //     Alert(title: Text("完成"), message: Text("已发送关面灯指令"))
-            // }
             .alert("完成", isPresented: $showLghtClAlert) {
                 Button("OK", role: .cancel) { }
             } message: {
