@@ -107,8 +107,8 @@ struct ContentView: View {
                         .frame(maxWidth: .infinity, maxHeight: .infinity)
                         .aspectRatio(contentMode: .fit)
                         .frame(
-                        width: geometry.size.width * 0.3,
-                        height: geometry.size.height * 0.23
+                        width: geometry.size.width * 0.35,
+                        height: geometry.size.height * 0.12
                         )
                         .background(Color.blue)
                         .cornerRadius(15)
@@ -140,8 +140,8 @@ struct ContentView: View {
                         .frame(maxWidth: .infinity, maxHeight: .infinity)
                         .aspectRatio(contentMode: .fit)
                         .frame(
-                        width: geometry.size.width * 0.3,
-                        height: geometry.size.height * 0.23
+                        width: geometry.size.width * 0.35,
+                        height: geometry.size.height * 0.12
                         )
                         .background(Color.red)
                         .cornerRadius(15)
@@ -173,8 +173,8 @@ struct ContentView: View {
                         .frame(maxWidth: .infinity, maxHeight: .infinity)
                         .aspectRatio(contentMode: .fit)
                         .frame(
-                        width: geometry.size.width * 0.3,
-                        height: geometry.size.height * 0.23
+                        width: geometry.size.width * 0.35,
+                        height: geometry.size.height * 0.12
                         )
                         .background(Color.blue)
                         .cornerRadius(15)
@@ -206,8 +206,8 @@ struct ContentView: View {
                         .frame(maxWidth: .infinity, maxHeight: .infinity)
                         .aspectRatio(contentMode: .fit)
                         .frame(
-                        width: geometry.size.width * 0.3,
-                        height: geometry.size.height * 0.23
+                        width: geometry.size.width * 0.35,
+                        height: geometry.size.height * 0.12
                         )
                         .background(Color.red)
                         .cornerRadius(15)
@@ -239,8 +239,8 @@ struct ContentView: View {
                         .frame(maxWidth: .infinity, maxHeight: .infinity)
                         .aspectRatio(contentMode: .fit)
                         .frame(
-                        width: geometry.size.width * 0.3,
-                        height: geometry.size.height * 0.23
+                        width: geometry.size.width * 0.35,
+                        height: geometry.size.height * 0.12
                         )
                         .background(Color.blue)
                         .cornerRadius(15)
@@ -272,8 +272,8 @@ struct ContentView: View {
                         .frame(maxWidth: .infinity, maxHeight: .infinity)
                         .aspectRatio(contentMode: .fit)
                         .frame(
-                        width: geometry.size.width * 0.3,
-                        height: geometry.size.height * 0.23
+                        width: geometry.size.width * 0.35,
+                        height: geometry.size.height * 0.12
                         )
                         .background(Color.red)
                         .cornerRadius(15)
@@ -298,7 +298,7 @@ struct ContentView: View {
                     .font(.footnote)
                     .padding()
                     .frame(maxWidth: .infinity, alignment: .center)
-                    ..onChange(of: lastOperation) { newOperation in
+                    .onChange(of: lastOperation) { newOperation in
                         print("上一次操作：\(newOperation)")
                         opTip = "上一次操作：\(newOperation)"
                     }
