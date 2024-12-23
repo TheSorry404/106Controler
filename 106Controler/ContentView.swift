@@ -69,14 +69,13 @@ struct ContentView: View {
     @State private var showLghtClAlert = false
     @State private var showError = false
     @State private var errorMessage: String?
+    @State var lastOperation = "无"
+    @State var opTip = "上一次操作：无"
     
     
     var body: some View {        
         GeometryReader { geometry in
             VStack {
-
-                @State var lastOperation = "无"
-                @State var opTip = "上一次操作：无"
 
                 Spacer()
 
@@ -109,7 +108,7 @@ struct ContentView: View {
                         .aspectRatio(contentMode: .fit)
                         .frame(
                         width: geometry.size.width * 0.3,
-                        height: geometry.size.height * 0.15
+                        height: geometry.size.height * 0.23
                         )
                         .background(Color.blue)
                         .cornerRadius(15)
@@ -142,7 +141,7 @@ struct ContentView: View {
                         .aspectRatio(contentMode: .fit)
                         .frame(
                         width: geometry.size.width * 0.3,
-                        height: geometry.size.height * 0.15
+                        height: geometry.size.height * 0.23
                         )
                         .background(Color.red)
                         .cornerRadius(15)
@@ -175,7 +174,7 @@ struct ContentView: View {
                         .aspectRatio(contentMode: .fit)
                         .frame(
                         width: geometry.size.width * 0.3,
-                        height: geometry.size.height * 0.15
+                        height: geometry.size.height * 0.23
                         )
                         .background(Color.blue)
                         .cornerRadius(15)
@@ -208,7 +207,7 @@ struct ContentView: View {
                         .aspectRatio(contentMode: .fit)
                         .frame(
                         width: geometry.size.width * 0.3,
-                        height: geometry.size.height * 0.15
+                        height: geometry.size.height * 0.23
                         )
                         .background(Color.red)
                         .cornerRadius(15)
@@ -241,7 +240,7 @@ struct ContentView: View {
                         .aspectRatio(contentMode: .fit)
                         .frame(
                         width: geometry.size.width * 0.3,
-                        height: geometry.size.height * 0.15
+                        height: geometry.size.height * 0.23
                         )
                         .background(Color.blue)
                         .cornerRadius(15)
@@ -274,7 +273,7 @@ struct ContentView: View {
                         .aspectRatio(contentMode: .fit)
                         .frame(
                         width: geometry.size.width * 0.3,
-                        height: geometry.size.height * 0.15
+                        height: geometry.size.height * 0.23
                         )
                         .background(Color.red)
                         .cornerRadius(15)
@@ -299,9 +298,9 @@ struct ContentView: View {
                     .font(.footnote)
                     .padding()
                     .frame(maxWidth: .infinity, alignment: .center)
-                    .onChange(of: lastOperation) { lastOperation in
-                        print("上一次操作：\(lastOperation)")
-                        opTip = "上一次操作：\(lastOperation)"
+                    ..onChange(of: lastOperation) { newOperation in
+                        print("上一次操作：\(newOperation)")
+                        opTip = "上一次操作：\(newOperation)"
                     }
             }
     }
