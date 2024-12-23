@@ -18,7 +18,7 @@ import UIKit
 struct ContentView: View {
     
     @State var refresher = 0
-    @State var opTip = "上一次操作：无"
+    
     
     class ViewController: UIViewController {
         
@@ -76,6 +76,7 @@ struct ContentView: View {
             VStack {
 
                 @State var lastOperation = "无"
+                @State var opTip = "上一次操作：无"
 
                 Spacer()
 
@@ -298,7 +299,7 @@ struct ContentView: View {
                     .font(.footnote)
                     .padding()
                     .frame(maxWidth: .infinity, alignment: .center)
-                    .onChange(of: opTip) { lastOperation in
+                    .onChange(of: lastOperation) { lastOperation in
                         print("上一次操作：\(lastOperation)")
                         opTip = "上一次操作：\(lastOperation)"
                     }
