@@ -15,6 +15,7 @@
 		044716852CBA48ED009658D7 /* 106Controler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 106Controler.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0457CA2D2D17F95D0093E0A3 /* 106Controler.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = 106Controler.xcodeproj; sourceTree = "<group>"; };
 		04A9048F2D17FCF000878793 /* 106Controler.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = 106Controler.xcodeproj; sourceTree = "<group>"; };
+		85B0CDF72D7725F500C54E6F /* 106Controler.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = 106Controler.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -60,6 +61,11 @@
 			sourceTree = "<group>";
 		};
 		04A904922D17FCF000878793 /* Products */ = {
+			isa = PBXGroup;
+			name = Products;
+			sourceTree = "<group>";
+		};
+		85B0CDFA2D7725F500C54E6F /* Products */ = {
 			isa = PBXGroup;
 			name = Products;
 			sourceTree = "<group>";
@@ -125,6 +131,10 @@
 				{
 					ProductGroup = 0457CA302D17F95D0093E0A3 /* Products */;
 					ProjectRef = 0457CA2D2D17F95D0093E0A3 /* 106Controler.xcodeproj */;
+				},
+				{
+					ProductGroup = 85B0CDFA2D7725F500C54E6F /* Products */;
+					ProjectRef = 85B0CDF72D7725F500C54E6F /* 106Controler.xcodeproj */;
 				},
 				{
 					ProductGroup = 04A904922D17FCF000878793 /* Products */;
